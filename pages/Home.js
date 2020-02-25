@@ -4,7 +4,7 @@ import { Button, View } from "react-native";
 export default class Homescreen extends Component {
   static navigationOptions = {
     title: "Home",
-    headerBackTitle:"Back"
+    headerBackTitle: "Back"
   };
 
   render() {
@@ -35,7 +35,7 @@ export default class Homescreen extends Component {
         <Button
           title={"Top Nav Bar"}
           onPress={() => {
-            navigate("MaterialTopNavigator", {name:"Dynamic"});
+            navigate("MaterialTopNavigator", { name: "Dynamic" });
           }}
         />
 
@@ -45,7 +45,20 @@ export default class Homescreen extends Component {
             navigate("BottomNavigator");
           }}
         />
+
+        <Button
+          title={"Switch Nav"}
+          onPress={() => {
+            navigate("SwitchNavigator");
+          }}
+        />
         
+        <Button
+          title={"Drawer Nav Bar"}
+          onPress={() => {
+            navigate("DrawerNav");
+          }}
+        />
       </View>
     );
   }
